@@ -1,12 +1,16 @@
-body {
-    text-align: center;
-    margin: 20px;
+
+
+.option-container{
+    width: 500px;
+    height: 50px;
+    background-color: yellow;
+
 }
-h3 {
-    color: #333333;
-    background: #f5f5f5;
-    padding: 20px;
+.destroyer{
+    background-color: brown;
 }
-img {
-    max-height: 500px;
+.destroyer-preview {
+    width: 20px;
+    height: 10px;
+    margin: 3px;
 }
