@@ -1,4 +1,5 @@
 import download from './assets/download.jpg';
+import './styles.css';
 
 const title = document.createElement('h3');
 title.textContent = 'Webpack made it easy to!!!!!!!!';
