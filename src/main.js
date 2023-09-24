@@ -1,12 +1,9 @@
-import download from './assets/download.jpg';
-import './styles.css';
+const optionContainer = document.querySelector('.option-container');
 
-const title = document.createElement('h3');
-title.textContent = 'Webpack made it easy to!!!!!!!!';
+const flipButton  = document.querySelector('#flip-button');
 
-const page = document.querySelector('body');
-page.append(title);
+function flip(){
+    console.log(optionContainer.children);
+}
 
-const img = new Image();
-img.src = download;
-page.appendChild(img);
+flipButton.addEventListener('click',flip);
