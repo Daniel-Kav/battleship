@@ -34,6 +34,10 @@ function addShipPiece(ship) {
             shipBlocks.push(allBoardBlocks[Number(validStart) + i * width])
         }
     }
+    if (isHorizontal){
+        shipBlocks.every((_shipBlock ,index) => 
+        shipBlocks[0].id % width != width - (shipBlocks.length - (index + 1)))
+    }
 
     shipBlocks.forEach(shipBlock => {
         shipBlock.classList.add(ship.name);
