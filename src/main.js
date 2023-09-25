@@ -1,9 +1,5 @@
-const optionContainer = document.querySelector('.option-container');
+import './styles.css';
+import flip from './flip.js';
+import { createBoard } from './board';
+import { Ship, ships, addShipPiece } from './ships'; 
 
-const flipButton  = document.querySelector('#flip-button');
-
-function flip(){
-    console.log(optionContainer.children);
-}
-
-flipButton.addEventListener('click',flip);

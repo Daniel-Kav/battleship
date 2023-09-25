@@ -22,7 +22,14 @@ module.exports = {
       {
         test: /\.css$/,
         use: ["style-loader", "css-loader"],
-      }
+      },
+      {
+        test: /\.js$/, // Apply the loader to .js files
+        exclude: /node_modules/, // Don't apply it to files in node_modules
+        use: {
+          loader: 'babel-loader',
+        },
+      },
     ],
   }
 };
