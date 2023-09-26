@@ -11,10 +11,10 @@ const allPlayerBlocks =  document.querySelectorAll('#player div');
 allPlayerBlocks.forEach(playerBlock => {
     playerBlock.addEventListener('dragover', dragover);
     playerBlock.addEventListener('drop', dropShip);
-}
+});
 
 function dragstart(e){
-draggedShip = e.target;
+    draggedShip = e.target;
 }
 
 function dragover(e){
@@ -22,5 +22,6 @@ function dragover(e){
 }
 function dropShip(){
     const startId = e.target.id;
-    const ship = ships[draggedShip.id];  
+    const ship = ships[draggedShip.id];
+    addShipPiece(ship) 
 }
