@@ -1,4 +1,4 @@
-//drag player ships
+//drag player ships/
 const optionContainer = document.querySelector('.option-container');
 let draggedShip;
 const ships = [destroyer, submarine, cruiser, battleship, carrier]
