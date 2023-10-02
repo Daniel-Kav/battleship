@@ -24,10 +24,9 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /*!*********************!*\
   !*** ./src/drag.js ***!
   \*********************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ (() => {
 
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   dragstart: () => (/* binding */ dragstart)\n/* harmony export */ });\n//drag player ships\nconst optionContainer = document.querySelector('.option-container');\nconst optionShips = Array.from(optionContainer.children);\noptionShips.forEach(optionShip => optionShip.addEventListener('dragstart', dragstart));\nfunction dragstart(e) {\n  console.log(e.target);\n}\n\n//# sourceURL=webpack://battleship/./src/drag.js?");
+eval("//drag player ships////\nconst optionContainer = document.querySelector('.option-container');\nlet draggedShip;\nconst ships = [destroyer, submarine, cruiser, battleship, carrier];\nconst optionShips = Array.from(optionContainer.children);\noptionShips.forEach(optionShip => optionShip.addEventListener('dragstart', dragstart));\nconst allPlayerBlocks = document.querySelectorAll('#player div');\nallPlayerBlocks.forEach(playerBlock => {\n  playerBlock.addEventListener('dragover', dragover);\n  playerBlock.addEventListener('drop', dropShip);\n});\nfunction dragstart(e) {\n  draggedShip = e.target;\n}\nfunction dragover(e) {\n  e.preventDefault();\n}\nfunction dropShip() {\n  const startId = e.target.id;\n  const ship = ships[draggedShip.id];\n  addShipPiece(ship);\n}\n\n//# sourceURL=webpack://battleship/./src/drag.js?");
 
 /***/ }),
 
@@ -48,7 +47,7 @@ eval("const flipButton = document.querySelector('#flip-button');\nconst optionCo
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles.css */ \"./src/styles.css\");\n/* harmony import */ var _flip_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./flip.js */ \"./src/flip.js\");\n/* harmony import */ var _flip_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_flip_js__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _board__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./board */ \"./src/board.js\");\n/* harmony import */ var _ships__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ships */ \"./src/ships.js\");\n/* harmony import */ var _drag__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./drag */ \"./src/drag.js\");\n\n\n\n\n\n\n//# sourceURL=webpack://battleship/./src/main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles.css */ \"./src/styles.css\");\n/* harmony import */ var _flip_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./flip.js */ \"./src/flip.js\");\n/* harmony import */ var _flip_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_flip_js__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _board__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./board */ \"./src/board.js\");\n/* harmony import */ var _ships__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ships */ \"./src/ships.js\");\n/* harmony import */ var _drag__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./drag */ \"./src/drag.js\");\n/* harmony import */ var _drag__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_drag__WEBPACK_IMPORTED_MODULE_4__);\n\n\n\n\n\n\n//# sourceURL=webpack://battleship/./src/main.js?");
 
 /***/ }),
 
